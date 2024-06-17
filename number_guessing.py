@@ -6,6 +6,8 @@ Do not run this file directly.
 Rather, call this function from main.py and run that file.
 """
 
+import random
+
 
 def guess_number(low, high, num_attempts):
     """
@@ -24,3 +26,29 @@ def guess_number(low, high, num_attempts):
     :param num_attempts: The number of attempts the user is given to guess the correct number.
     :returns: True if the user answers any attempt correctly, False otherwise.
     """
+
+    print(f"Range: {low} to {high}; Attempts: {num_attempts}")
+    generate = random.randint(low, high)
+    # print(f"Cheat: {generate}")
+    # guess = input(f"Guess a number between {low} and {high}. You only have {num_attempts} attempts. ")
+    # if guess == generate:
+    #     return True
+    # guess = input(f"Guess a number between {low} and {high}. You only have {num_attempts} attempts. ")
+    # if guess == generate:
+    #     return True
+    # return False
+
+    for i in range(num_attempts):
+        guess = input(f"Guess a number between {low} and {high}. You only have {num_attempts} attempts. ")
+        if guess == str(generate):
+            return True
+    return False
+
+
+
+
+
+
+
+
+
